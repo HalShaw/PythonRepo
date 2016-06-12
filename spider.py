@@ -116,7 +116,7 @@ class Article(object):
 					else:
 						continue
 				except Exception as e:
-					sys.exit()
+					pass
 			except socket.error as e:
 				pass#可以不打印出错误
 	
