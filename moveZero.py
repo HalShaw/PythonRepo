@@ -21,26 +21,12 @@ if __name__ == '__main__':
 	print(s.moveZeroes([1,0,20,0,1]))
 
 enumerate'''
-class Solution(object):
-    def searchInsert(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
-        lst=sorted(list(set(nums)))
-        for i,x in enumerate(lst):
-            if target<lst[0]:
-                return 0
-            elif x==target:
-                return i
-            elif target>lst[-1]:
-                l=len(lst)
-                return l
-            else:
-                while target<x:
-                    target=x
-                    return i
-if __name__=='__main__':
-    s=Solution()
-    print(s.searchInsert([1,2,3,4,5,6,8],7))
+words=["abcw","baz","foo","bar","xtfn","abcdef"]
+l=[]
+for i in range(len(words)):
+    for j in range(1,len(words)):
+        print(set(words[i]),set(words[j]))
+        if not set(words[i])&set(words[j]):
+            s=len(words[i])*len(words[j])
+            l.append(s)
+print(max(l))
