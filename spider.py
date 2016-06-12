@@ -111,7 +111,7 @@ class Article(object):
 					print('Downloaded Successfully...\n')
 					cou+=1
 					time.sleep(1)
-					if cou>3:#控制爬取300篇文章
+					if cou>300:#控制爬取300篇文章
 						sys.exit()
 					else:
 						continue
